@@ -269,7 +269,7 @@ const PortfolioWebsite = () => {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 block text-black w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   placeholder="Enter your email"
                 />
               </div>
@@ -280,7 +280,7 @@ const PortfolioWebsite = () => {
                 <textarea
                   id="message"
                   rows={4}
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                  className="mt-1 text-black block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                   placeholder="Your message"
                 />
               </div>
