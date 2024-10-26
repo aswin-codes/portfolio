@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Menu, X, MapPin, School, Code } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Menu, X, MapPin, School, Code, Briefcase } from 'lucide-react';
+
 
 const projects = [
   {
@@ -29,6 +30,26 @@ const projects = [
     tech: ["Flutter", "Django", "Next js", "Fast API", "Machine Learning"],
     image: "https://camo.githubusercontent.com/82a3c9e81425cb0446abf390ef5f842572552574faa049c4084f2e9ac64e33b1/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6474306c7461796c6a2f696d6167652f75706c6f61642f76313732383130313939332f53637265656e73686f745f313732383130313833305f79717a7969702e706e67",
     link: "https://github.com/aswin-codes/IntelGenAI"
+  }
+];
+
+
+const internships = [
+  {
+    company: "Paynav",
+    position: "Flutter Developer",
+    type: "Virtual Internship",
+    duration: "May 2024 - Present",
+    description: "Adde additional features and managed an existing fin-tech app Paynav.",
+    tech: ["Flutter", "Dart", "FinTech"]
+  },
+  {
+    company: "Cehpoint",
+    position: "Flutter Developer",
+    type: "Virtual Internship",
+    duration: "May 2023 - Jul 2023",
+    description: "Developed a social media app and e-commerce app using Flutter framework.",
+    tech: ["Flutter", "Dart", "Social Media", "E-commerce"]
   }
 ];
 
@@ -62,8 +83,8 @@ const PortfolioWebsite = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+       {/* Navigation */}
+       <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
@@ -74,6 +95,7 @@ const PortfolioWebsite = () => {
             <div className="hidden md:block">
               <div className="flex space-x-8">
                 <button onClick={() => scrollToSection('home')} className="text-gray-600 hover:text-gray-900">Home</button>
+                <button onClick={() => scrollToSection('internships')} className="text-gray-600 hover:text-gray-900">Experience</button>
                 <button onClick={() => scrollToSection('projects')} className="text-gray-600 hover:text-gray-900">Projects</button>
                 <button onClick={() => scrollToSection('contact')} className="text-gray-600 hover:text-gray-900">Contact</button>
               </div>
@@ -93,6 +115,7 @@ const PortfolioWebsite = () => {
           <div className="md:hidden bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button onClick={() => scrollToSection('home')} className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900">Home</button>
+              <button onClick={() => scrollToSection('internships')} className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900">Experience</button>
               <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900">Projects</button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-gray-600 hover:text-gray-900">Contact</button>
             </div>
@@ -104,9 +127,9 @@ const PortfolioWebsite = () => {
       <section id="home" className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
-            <img 
-              src="https://res.cloudinary.com/ddkpclbs2/image/upload/v1729954939/images_isvutm.jpg" 
-              alt="Profile" 
+            <img
+              src="https://res.cloudinary.com/ddkpclbs2/image/upload/v1729954939/images_isvutm.jpg"
+              alt="Profile"
               className="rounded-full w-32 h-32 object-cover border-4 border-indigo-500"
             />
           </div>
@@ -134,15 +157,15 @@ const PortfolioWebsite = () => {
           </div>
 
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            A passionate developer specializing in building beautiful and functional web applications 
+            A passionate developer specializing in building beautiful and functional web applications
             with modern technologies. Currently pursuing Computer Science at VIT.
           </p>
 
           {/* Skills Section */}
           <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-              {["JavaScript", "React", "Node.js", "Python", "Flutter", "Next.js", "MongoDB", "PostgreSQL"].map((skill, index) => (
-                <span 
+              {["JavaScript", "React", "Node.js", "Express JS", "Python", "Flutter", "Next.js", "PostgreSQL",].map((skill, index) => (
+                <span
                   key={index}
                   className="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium"
                 >
@@ -153,18 +176,18 @@ const PortfolioWebsite = () => {
           </div>
 
           <div className="flex justify-center space-x-6">
-            <a 
-              href="https://github.com/aswin-codes" 
-              target="_blank" 
+            <a
+              href="https://github.com/aswin-codes"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
             >
               <Github size={24} />
               <span>GitHub</span>
             </a>
-            <a 
-              href="https://www.linkedin.com/in/aswin-raaj/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/aswin-raaj/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 flex items-center space-x-2 bg-white px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
             >
@@ -174,6 +197,7 @@ const PortfolioWebsite = () => {
           </div>
         </div>
       </section>
+
 
       {/* Projects Section */}
       <section id="projects" className="py-16 bg-white">
@@ -200,6 +224,36 @@ const PortfolioWebsite = () => {
         </div>
       </section>
 
+      {/* Internships Section */}
+      <section id="internships" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Experience</h2>
+          <div className="space-y-8 max-w-3xl mx-auto">
+            {internships.map((internship, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 transform hover:scale-102 transition-transform duration-300">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">{internship.position}</h3>
+                    <p className="text-lg text-indigo-600">{internship.company}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-gray-600">{internship.duration}</p>
+                    <p className="text-gray-500 text-sm">{internship.type}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 mb-4">{internship.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {internship.tech.map((tech, techIndex) => (
+                    <span key={techIndex} className="px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
