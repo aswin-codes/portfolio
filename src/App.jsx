@@ -105,7 +105,7 @@ const PortfolioWebsite = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
             <img 
-              src="https://media.licdn.com/dms/image/v2/D4E03AQF0eEhZh34WTg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1715776891425?e=1735171200&v=beta&t=uS0-S7XA7oAzH4dDmPvQrkzHCLntpFEzzSjFzkslWDE" 
+              src="https://res.cloudinary.com/ddkpclbs2/image/upload/v1729954939/images_isvutm.jpg" 
               alt="Profile" 
               className="rounded-full w-32 h-32 object-cover border-4 border-indigo-500"
             />
