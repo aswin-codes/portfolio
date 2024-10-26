@@ -40,7 +40,7 @@ const internships = [
     position: "Flutter Developer",
     type: "Virtual Internship",
     duration: "May 2024 - Present",
-    description: "Adde additional features and managed an existing fin-tech app Paynav.",
+    description: "Added additional features and managed an existing fin-tech app Paynav.",
     tech: ["Flutter", "Dart", "FinTech"]
   },
   {
