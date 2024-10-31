@@ -3,7 +3,7 @@ export const internships = [
     company: "Paynav",
     position: "Flutter Developer",
     type: "Virtual Internship",
-    duration: "May 2024 - Present",
+    duration: "May 2024 - Oct 2024",
     description:
       "Added additional features and managed an existing fin-tech app Paynav.",
     tech: ["Flutter", "Dart", "FinTech"],
