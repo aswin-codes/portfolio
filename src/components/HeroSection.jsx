@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import HyperText from './ui/hyper-text';
 import { Github, Linkedin, School, MapPin, Code } from 'lucide-react';
 import { VelocityScroll } from './ui/scroll-based-velocity';
+import SparklesText from './ui/sparkles-text';
+import RetroGrid from './ui/retro-grid';
 
 
 
@@ -79,7 +81,7 @@ const HeroSection = () => {
                         <Linkedin size={24} />
                         <span>LinkedIn</span>
                     </a>
-                </div>
+                </div>                
             </div>
         </section>
     );
