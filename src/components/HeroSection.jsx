@@ -53,7 +53,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-          {['JavaScript', 'React', 'Node.js', 'Express JS', 'Python', 'Flutter', 'Next.js', 'PostgreSQL'].map((skill, index) => (
+          {['JavaScript', 'React', 'Node.js', 'Express JS', 'Python', 'Flutter', 'Next.js', 'PostgreSQL',"React Native"].map((skill, index) => (
             <span
               key={index}
               className="px-4 py-2 bg-gradient-to-r from-teal-700 to-cyan-700 text-gray-200 rounded-full text-sm font-medium"
