@@ -21,7 +21,7 @@ const PortfolioWebsite = () => {
       <HeroSection />
       <ProjectsSection/>
       <InternshipsSection />
-      <ContactSection />
+      {/*<ContactSection />*/}
       <Footer />
       
     </div>
