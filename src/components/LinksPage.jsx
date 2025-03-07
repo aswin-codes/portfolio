@@ -15,7 +15,7 @@ const LinksPage = () => {
   const links = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/aswin-raaj/', icon: 'fab fa-linkedin', color: '#0077B5' },
     { name: 'Instagram', url: 'https://www.instagram.com/aswin.code/', icon: 'fab fa-instagram', color: '#E1306C' },
-    { name: 'GitHub', url: 'https://github.com/aswin-codes/', icon: 'fab fa-github', color: '#333' },
+    { name: 'GitHub', url: 'https://github.com/aswin-codes/', icon: 'fab fa-github', color: '#000000' },
     { name: 'Play Store (Prepy)', url: 'https://play.google.com/store/apps/details?id=com.prepy.Prepy', icon: 'fab fa-google-play', color: '#00C853' },
     { name: 'Intervane (Upcoming)', url: 'https://intervane.vercel.app', icon: 'fas fa-rocket', color: '#FF6B6B' },
   ];
