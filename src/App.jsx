@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Github, Linkedin, Mail, ExternalLink, Menu, X, MapPin, School, Code, Briefcase } from 'lucide-react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
