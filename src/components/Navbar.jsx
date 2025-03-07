@@ -41,6 +41,7 @@ const Navbar = () => {
               <button onClick={() => scrollToSection('internships')} className="text-teal-400 hover:text-teal-200">Experience</button>
               <button onClick={() => scrollToSection('projects')} className="text-teal-400 hover:text-teal-200">Projects</button>
               <button onClick={() => scrollToSection('contact')} className="text-teal-400 hover:text-teal-200">Contact</button>
+              <a href="/links" className="text-teal-400 hover:text-teal-200">Links</a>
             </div>
           </div>
 
@@ -59,6 +60,7 @@ const Navbar = () => {
             <button onClick={() => scrollToSection('internships')} className="block w-full text-left px-3 py-2 text-teal-400 hover:text-teal-200">Experience</button>
             <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 text-teal-400 hover:text-teal-200">Projects</button>
             <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-teal-400 hover:text-teal-200">Contact</button>
+            <a href="/links" className="block w-full text-left px-3 py-2 text-teal-400 hover:text-teal-200">Links</a>
           </div>
         </div>
       )}
