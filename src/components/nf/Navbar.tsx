@@ -102,7 +102,7 @@ const Navbar = () => {
             <FileText className="h-4 w-4" /> Résumé
           </a>
           <Link to="/links" aria-label="All links" className="flex items-center gap-1.5">
-            <img src={profile.photo} alt="" className="h-8 w-8 rounded object-cover object-top" />
+            <span className="grid h-8 w-8 place-items-center rounded bg-nf-red font-display text-xl leading-none text-white">A</span>
           </Link>
         </div>
       </nav>

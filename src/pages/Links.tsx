@@ -6,7 +6,6 @@ const LinksPage = () => {
   
   const profile = {
     name: "Aswin Raaj P S",
-    photo: "/profile.png", // Using the same profile image from your portfolio
     title: "Full-Stack Software Engineer",
     college: "Canvas OTT · VIT 2026",
     location: "Chennai, India"
@@ -58,18 +57,15 @@ const LinksPage = () => {
             <div className="flex flex-col sm:flex-row items-center p-6">
               {/* Photo */}
               <div className="relative mb-4 sm:mb-0 sm:mr-6">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand to-brand-light/70">
-                  <div className="absolute inset-1 bg-card rounded-full flex items-center justify-center overflow-hidden">
-                    <img
-                      src={profile.photo}
-                      alt={profile.name}
-                      className="w-full h-full object-cover rounded-full"
-                      onLoad={() => setIsLoaded(true)}
-                    />
-                  </div>
+                <div
+                  className="grid h-32 w-32 place-items-center rounded-full bg-brand font-display text-7xl leading-none text-white"
+                  role="img"
+                  aria-label={profile.name}
+                >
+                  A
                 </div>
               </div>
-              
+
               {/* Details */}
               <div className="flex-1 text-center sm:text-left">
                 <h1 className="text-2xl sm:text-3xl font-bold">{profile.name}</h1>

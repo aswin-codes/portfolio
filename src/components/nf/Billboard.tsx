@@ -1,30 +1,29 @@
+import { useCallback, useState } from 'react';
 import { Info, Play } from 'lucide-react';
 import { Mark } from './Poster';
-import { education, experience, profile } from '@/data/portfolio';
+import CareerPlayer from './CareerPlayer';
+import { education, experience, profile, type Chapter } from '@/data/portfolio';
 
 const Billboard = () => {
   const now = experience.find((e) => e.current);
+  // ambient light behind the player follows whatever chapter is on screen
+  const [glow, setGlow] = useState('#8f0a14');
+  const onChapter = useCallback((c: Chapter) => setGlow(c.art.to), []);
 
   return (
     <section id="home" className="relative isolate flex min-h-[640px] items-end overflow-hidden bg-black md:min-h-[95vh]">
-      {/* Key art */}
-      <div className="absolute inset-y-0 right-0 -z-10 w-full md:w-[68%]">
-        <img
-          src={profile.photo}
-          alt="Portrait of Aswin Raaj"
-          className="h-full w-full object-cover object-[60%_15%] opacity-80 grayscale contrast-[1.1] md:object-[70%_20%]"
-        />
-        {/* a faint red key light so the grayscale photo sits in the palette */}
-        <div className="absolute inset-0 bg-[radial-gradient(60%_70%_at_70%_35%,rgba(229,9,20,.22),transparent_70%)] mix-blend-screen" />
-      </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/75 to-transparent md:via-black/40" />
+      <div
+        aria-hidden
+        className="absolute -z-10 h-[70vh] w-[70vh] rounded-full opacity-40 blur-[140px] transition-colors duration-1000 max-md:bottom-[10%] max-md:left-1/2 max-md:-translate-x-1/2 md:right-[8%] md:top-[12%]"
+        style={{ backgroundColor: glow }}
+      />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-gradient-to-t from-nf-bg via-nf-bg/60 to-transparent" />
 
-      <div className="w-full px-[4%] pb-36 pt-28 md:pb-52">
-        <div className="max-w-[640px]">
+      <div className="flex w-full flex-col gap-10 px-[4%] pb-36 pt-28 md:flex-row md:items-end md:justify-between md:gap-12 md:pb-52">
+        <div className="max-w-[600px] md:flex-1">
           <Mark label="Portfolio" className="text-sm" />
 
-          <h1 className="mt-3 font-display text-[clamp(4.5rem,9vw,8.5rem)] leading-[0.82] text-white text-shadow">
+          <h1 className="mt-3 font-display text-[clamp(4.5rem,8vw,8rem)] leading-[0.82] text-white text-shadow">
             Aswin
             <br />
             Raaj <span className="text-[0.5em] align-top leading-none text-white/70">P S</span>
@@ -68,12 +67,15 @@ const Billboard = () => {
             </a>
           </div>
         </div>
-      </div>
 
-      {/* rating flag, Netflix-style, but for availability */}
-      <span className="absolute bottom-[34%] right-0 hidden border-l-[3px] border-white/70 bg-[#333]/60 py-1.5 pl-3 pr-14 text-base text-white md:block">
-        {profile.availability}
-      </span>
+        <div className="w-full md:w-[min(44vw,620px)] md:shrink-0">
+          <CareerPlayer onChapter={onChapter} />
+          {/* rating flag, Netflix-style, but for availability */}
+          <span className="mt-5 hidden border-l-[3px] border-white/70 bg-[#333]/60 py-1.5 pl-3 pr-14 text-base text-white md:-mr-[4vw] md:ml-auto md:block md:w-fit">
+            {profile.availability}
+          </span>
+        </div>
+      </div>
     </section>
   );
 };

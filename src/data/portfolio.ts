@@ -11,7 +11,6 @@ export const profile = {
   linkedin: 'https://linkedin.com/in/aswin-raaj',
   site: 'https://aswincode.vercel.app',
   resume: '/aswin_cv.pdf',
-  photo: '/profile.png',
   synopsis:
     'Full-stack engineer who ships production systems end to end: subscription billing, media infrastructure, LLM tooling and mobile apps used by 1,000+ people. Three internships, a hackathon win, and three published research papers before graduating.',
 };
@@ -248,3 +247,78 @@ export const education = {
   coursework: ['Data Structures & Algorithms', 'DBMS', 'Computer Architecture', 'Machine Learning'],
   certification: 'SQL for Database, UC Davis (Coursera)',
 };
+
+export type Chapter = {
+  id: string;
+  /** months since Sep 2022, used to place the chapter on the scrub bar */
+  at: number;
+  date: string;
+  title: string;
+  subtitle: string;
+  art: PosterArt;
+};
+
+const artOf = (id: string) => experience.find((e) => e.id === id)!.art;
+
+/** Dated moments from the resume, played as episodes in the hero. */
+export const timeline: Chapter[] = [
+  {
+    id: 'vit',
+    at: 0,
+    date: 'Sep 2022',
+    title: 'VIT',
+    subtitle: 'Starts a B.Tech in Computer Science at VIT.',
+    art: { from: '#0d0d0d', to: '#3a3a3a', motif: 'grid', wordmark: 'VIT' },
+  },
+  {
+    id: 'learnoverse',
+    at: 28,
+    date: 'Jan 2025',
+    title: 'Learnoverse',
+    subtitle: 'Ships OAuth, JWT and over-the-air updates for a React Native app.',
+    art: artOf('learnoverse'),
+  },
+  {
+    id: 'iit-madras',
+    at: 32,
+    date: 'May 2025',
+    title: 'IIT Madras',
+    subtitle: 'Turns millions of geospatial records into vector tiles. Loads get 30% faster.',
+    art: artOf('iit-madras'),
+  },
+  {
+    id: 'icccnt',
+    at: 34,
+    date: 'Jul 2025',
+    title: 'ICCCNT 2025',
+    subtitle: 'Presents real-estate valuation research mixing sentiment and spatial data.',
+    art: { from: '#100410', to: '#7a1f5c', motif: 'bars', wordmark: 'ICCCNT' },
+  },
+  {
+    id: 'visteon',
+    at: 40,
+    date: 'Jan 2026',
+    title: 'Visteon',
+    subtitle: 'Builds MCP servers and a BERT guardrail classifier for Cognito AI.',
+    art: artOf('visteon'),
+  },
+  {
+    id: 'graduation',
+    at: 45,
+    date: 'Jun 2026',
+    title: 'Graduation',
+    subtitle: 'Graduates from VIT with a 9.03 GPA.',
+    art: { from: '#0a0a0a', to: '#6b5a1e', motif: 'rings', wordmark: 'CLASS OF 26' },
+  },
+  {
+    id: 'canvas-ott',
+    at: 46,
+    date: 'Jul 2026',
+    title: 'Canvas OTT',
+    subtitle: 'Moves media to Cloudflare R2 and cuts infrastructure costs by 50%.',
+    art: artOf('canvas-ott'),
+  },
+];
+
+/** months from Sep 2022 to "now" on the scrub bar */
+export const TIMELINE_END = 51;
