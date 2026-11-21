@@ -7,8 +7,8 @@ const LinksPage = () => {
   const profile = {
     name: "Aswin Raaj P S",
     photo: "/profile.png", // Using the same profile image from your portfolio
-    title: "Full Stack Developer",
-    college: "VIT Chennai",
+    title: "Full-Stack Software Engineer",
+    college: "Canvas OTT · VIT 2026",
     location: "Chennai, India"
   };
   

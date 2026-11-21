@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+				display: ['"Bebas Neue"', 'Impact', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -65,9 +69,19 @@ export default {
 				},
 				// Custom theme colors
 				brand: {
-					DEFAULT: '#3B82F6',
-					light: '#93C5FD',
-					dark: '#1D4ED8'
+					DEFAULT: '#E50914',
+					light: '#ff4d57',
+					dark: '#b20710'
+				},
+				nf: {
+					bg: '#141414',
+					surface: '#181818',
+					raised: '#2f2f2f',
+					line: '#404040',
+					muted: '#808080',
+					soft: '#b3b3b3',
+					red: '#E50914',
+					green: '#46d369'
 				},
 			},
 			borderRadius: {
