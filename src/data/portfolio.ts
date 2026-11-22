@@ -12,7 +12,7 @@ export const profile = {
   site: 'https://aswincode.vercel.app',
   resume: '/aswin_cv.pdf',
   synopsis:
-    'Full-stack engineer who ships production systems end to end: subscription billing, media infrastructure, LLM tooling and mobile apps used by 1,000+ people. Three internships, a hackathon win, and three published research papers before graduating.',
+    'Full-stack engineer who ships production systems end to end: subscription billing, media infrastructure, LLM tooling and mobile apps used by 1,000+ people. 5 internships, a hackathon win, and 3 published research papers before graduating.',
 };
 
 export type Experience = {
@@ -102,6 +102,36 @@ export const experience: Experience[] = [
     ],
     stack: ['TypeScript', 'React Native', 'Next.js', 'FastAPI', 'MongoDB'],
     art: { from: '#0c0414', to: '#5b2a9a', motif: 'rings', wordmark: 'LEARNOVERSE' },
+  },
+  {
+    id: 'paynav',
+    company: 'Paynav',
+    role: 'App Developer Intern',
+    location: 'Bangalore, India (Remote)',
+    period: 'May 2024 – Oct 2024',
+    summary: 'Hardened a production fintech app for scale, payments and security.',
+    points: [
+      'Improved the reliability and scalability of a production fintech application to sustain 1,000+ concurrent users.',
+      'Integrated payment gateways and strengthened security controls across the transaction flow, improving transaction security by 15%.',
+      'Partnered with a cross-functional team of five engineers and designers on performance optimization, reducing latency by 25%.',
+    ],
+    stack: ['Mobile', 'Payment Gateways', 'API Security', 'Performance'],
+    art: { from: '#02100a', to: '#0f7a4a', motif: 'bars', wordmark: 'PAYNAV' },
+  },
+  {
+    id: 'cehpoint',
+    company: 'Cehpoint',
+    role: 'App Developer Intern',
+    location: 'West Bengal, India (Remote)',
+    period: 'May 2023 – Jul 2023',
+    summary: 'Built social and e-commerce apps across mobile and web.',
+    points: [
+      'Designed and developed a social media application end to end, spanning the front end and back end.',
+      'Built an e-commerce application with integrated payments and AI-driven product recommendations, increasing user engagement by 20%.',
+      'Delivered responsive, consistent user experiences across the mobile and web clients.',
+    ],
+    stack: ['Mobile', 'Web', 'Payments', 'Recommendations'],
+    art: { from: '#120408', to: '#a3133f', motif: 'grid', wordmark: 'CEHPOINT' },
   },
 ];
 
@@ -269,6 +299,22 @@ export const timeline: Chapter[] = [
     title: 'VIT',
     subtitle: 'Starts a B.Tech in Computer Science at VIT.',
     art: { from: '#0d0d0d', to: '#3a3a3a', motif: 'grid', wordmark: 'VIT' },
+  },
+  {
+    id: 'cehpoint',
+    at: 8,
+    date: 'May 2023',
+    title: 'Cehpoint',
+    subtitle: 'Builds social and e-commerce apps with payments and AI recommendations.',
+    art: artOf('cehpoint'),
+  },
+  {
+    id: 'paynav',
+    at: 20,
+    date: 'May 2024',
+    title: 'Paynav',
+    subtitle: 'Scales a production fintech app to 1,000+ concurrent users and cuts latency by 25%.',
+    art: artOf('paynav'),
   },
   {
     id: 'learnoverse',
